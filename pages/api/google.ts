@@ -115,8 +115,6 @@ const handler = async (req: NextApiRequest, res: NextApiResponse<any>) => {
     if (OPENAI_API_TYPE === 'azure') {
       url = `${OPENAI_API_HOST}/openai/deployments/${AZURE_DEPLOYMENT_ID}/chat/completions?api-version=${OPENAI_API_VERSION}`;
     }
-    console.log(url)
-    console.log(answerMessage)
 
     const answerRes = await fetch(url, {
       headers: {
